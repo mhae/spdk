@@ -8,8 +8,7 @@ name: Makefile CI
     branches:
       - master
   workflow_dispatch:
-    branches:
-      - master
+      
 jobs:
   build:
     runs-on:
