@@ -22,3 +22,9 @@ jobs:
         
     - name: Test NVMF
       run: /home/vagrant/mytest.sh -c /home/vagrant/test-from-sh --vagrantfile=/home/vagrant/spdk/scripts/vagrant/Vagrantfile --spdkdir=/home/vagrant/actions-runner/_work/spdk/spdk
+
+    - name: Archive Test Output
+      uses: actions/upload-artifact@v4
+      with:
+        name: nvmf-test-output
+        path: /home/vagrant/test-from-sh/output.tar
