@@ -18,6 +18,7 @@ jobs:
       with:
         submodules: 'true'
         fetch-tags: 'true'
+        fetch-depth: '0'
         
     - name: Test NVMF
       run: /home/vagrant/mytest.sh -c /home/vagrant/test-from-sh --vagrantfile=/home/vagrant/spdk/scripts/vagrant/Vagrantfile --spdkdir=/home/vagrant/actions-runner/_work/spdk/spdk
