@@ -30,6 +30,10 @@ function starttarget() {
 	$rpc_py < $testdir/rpcs.txt
 	timing_exit create_subsystems
 
+ 	# mhae testing
+  	ip addr
+   	sleep 5
+
 }
 
 function stoptarget() {
