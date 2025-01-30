@@ -1,0 +1,22 @@
+name: Makefile CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+  workflow_dispatch:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: [ self-hosted ]
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: 'true'
+        
+    - name: Test NVMF
+      run: /home/vagrant/mytest.sh -c /home/vagrant/test-from-sh --vagrantfile=/home/vagrant/spdk/scripts/vagrant/Vagrantfile --spdkdir=/home/vagrant/actions-runner/_work/spdk/spdk
