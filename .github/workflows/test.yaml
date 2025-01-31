@@ -14,15 +14,16 @@ jobs:
     runs-on:
       - self-hosted
     steps:
-      - uses: actions/checkout@v4
-        with:
-          submodules: 'true'
-          fetch-tags: 'true'
-          fetch-depth: '0'
+     # - uses: actions/checkout@v4
+     #   with:
+     #     submodules: 'true'
+     #     fetch-tags: 'true'
+     #     fetch-depth: '0'
           
       - name: Test NVMF
         # run: timeout 1h launch-test.sh
         run: ~/cancel.sh
+        shell: 'bash'
         
       - name: Archive Test Output
         uses: actions/upload-artifact@v4
