@@ -10,7 +10,7 @@ name: Test CI
   workflow_dispatch:
       
 jobs:
-  build:
+  build-and-test:
     runs-on:
       - self-hosted
     steps:
