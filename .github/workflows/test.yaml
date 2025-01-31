@@ -22,7 +22,7 @@ jobs:
           
       - name: Test NVMF
         # run: timeout 1h launch-test.sh
-        run: ~/catcher
+        run: exec ~/catcher
         
       - name: Archive Test Output
         uses: actions/upload-artifact@v4
