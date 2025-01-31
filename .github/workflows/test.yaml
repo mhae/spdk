@@ -23,7 +23,7 @@ jobs:
       - name: Test NVMF
         # run: exec timeout 1h launch-test.sh
         # run: exec ~/bin/launch-test.sh
-        run: exec cd /
+        run: exec /bin/foo
         
       - name: Archive Test Output
         uses: actions/upload-artifact@v4
