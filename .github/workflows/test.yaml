@@ -23,8 +23,7 @@ jobs:
           
       - name: Test NVMF
         # run: exec timeout 1h launch-test.sh
-        # run: exec launch-test.sh
-        run: xlaunch-test.sh
+        run: exec launch-test.sh
         
       - name: Archive Test Output
         uses: actions/upload-artifact@v4
