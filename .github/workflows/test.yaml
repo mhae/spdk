@@ -1,4 +1,4 @@
-name: Test CI
+cname: Test CI
 
 'on':
   push:
@@ -23,8 +23,9 @@ jobs:
       - name: Test NVMF
         # run: exec timeout 1h launch-test.sh
         # run: exec ~/bin/launch-test.sh
-        run: env
-        run: exec ls
+        run: |
+          exec env
+          ls
         
       - name: Archive Test Output
         uses: actions/upload-artifact@v4
