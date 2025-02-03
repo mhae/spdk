@@ -23,7 +23,8 @@ jobs:
           
       - name: Test NVMF
         # run: exec launch-test.sh
-        run: sh
+        run: ls
+        shell: sh
         
       - name: Archive Test Output
         uses: actions/upload-artifact@v4
