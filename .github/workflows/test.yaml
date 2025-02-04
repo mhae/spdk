@@ -23,6 +23,7 @@ jobs:
           
       - name: Test NVMF
         run: exec launch-test.sh
+        if: always()
         
       - name: Archive Test Output
         uses: actions/upload-artifact@v4
